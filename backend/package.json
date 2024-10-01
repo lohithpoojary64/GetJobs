@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon dev prettier"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "mongoose": "^8.7.0",
+    "nodemon": "^3.1.7"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  }
+}
