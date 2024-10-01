@@ -1,7 +1,16 @@
+'use client'
 import React from "react";
+import { useRouter } from "next/navigation";
 import { Button } from "antd";
 
-const Navbar = () => {
+const Navbar:React.FC = () => {
+
+  const router =  useRouter()
+
+  const handleClick =()=>{
+    router.push('/sign-up')
+  }
+
   return (
     <div className="h-[100px] w-[100%]  px-10 flex justify-between items-center">
       <h1 className="text-green-500 font-extrabold text-[20px]">GET-JOBS</h1>
@@ -14,7 +23,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="">
-        <Button type="primary" className="bg-green-500 h-[50px] w-[100px]" >Sign in</Button>
+        <Button type="primary" className="bg-green-500 h-[50px] w-[100px]" onClick={handleClick} >Sign in</Button>
       </div>
     </div>
   );
