@@ -1,5 +1,11 @@
+import bodyParser from 'body-parser';
 import express from 'express';
 
 const app = express();
 
-const port = process.env.PORT || 5000
+app.use(cors());
+app.use(json({ limit: '20kb' }));
+app.use(bodyParser);
+app.use(express.static('public'));
+
+export { app };
