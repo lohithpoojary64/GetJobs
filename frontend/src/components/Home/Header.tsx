@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <div className="h-[600px] w-[100%] px-[10px] mt-3 flex flex-col items-center ">
       <h1 className="text-green-500 text-2xl font-extrabold">
-        Show Your Skill's And Get Hired
+        Show Your Skills And Get Hired
       </h1>
       <div className="relative w-[100%] flex justify-between items-center">
         <Image

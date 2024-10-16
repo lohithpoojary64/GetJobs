@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
-import { Button, Avatar, Dropdown, Drawer } from "antd";
+import { Button, Avatar, Drawer } from "antd";
 import { UserOutlined, DownOutlined } from "@ant-design/icons";
 
 const { Search } = Input;
@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed flex justify-between items-center h-[60px] w-full bg-white px-[15%]">
+    <div className="relative flex justify-between items-center h-[70px] w-full bg-white px-[15%] shadow-sm shadow-gray-300">
       <div className="flex justify-between items-center w-[400px]">
         <h1 className="text-green-300 font-bold text-xl">GetJobs</h1>
         <h1>Jobs</h1>
