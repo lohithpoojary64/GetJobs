@@ -10,12 +10,12 @@ interface FieldType{
 
 const Signup = () => {
   return (
-    <div>
+    <div className="h-full w-full border border-solid border-green-500 py-6 px-3 rounded-2xl">
       <Form
         name="basic"
         labelCol={{ span: 8 }}
         wrapperCol={{ span: 16 }}
-        style={{ maxWidth: 600 }}
+        style={{ maxWidth: 600  }}
         initialValues={{ remember: true }}
         autoComplete="off"
       >
