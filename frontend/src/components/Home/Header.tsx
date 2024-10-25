@@ -4,7 +4,9 @@ import img1 from "../../../assests/header-img.jpg";
 import img2 from "../../../assests/img2.png";
 import Signup from "../../components/signUp/SignUp";
 
-const Header = () => {
+
+
+const Header:React.FC = () => {
   return (
     <div className="h-[600px] w-[100%] px-[10px] mt-3 flex flex-col items-center ">
       <h1 className="text-green-500 text-2xl font-extrabold">
@@ -18,7 +20,7 @@ const Header = () => {
           width={1000}
           className="h-[400px] w-[550px]"
         ></Image>
-        <div className="">
+        <div >
           <Signup />
         </div>
 

@@ -1,54 +1,48 @@
-'use client'
-import React from "react";
-import { Button, Checkbox, Form, Input } from "antd";
+'use client';
+import React from 'react';
+import { Button } from 'antd';
+import { GoogleOutlined, MailOutlined } from '@ant-design/icons';
 
-interface FieldType{
-    email:string;
-    password:string;
-    remember:string;
-}
+const Signup: React.FC = () => {
 
-const Signup = () => {
+  const handleGoogleLogin = () => {
+    // Google login logic goes here
+    console.log("Google Login Clicked");
+  };
+
+  const handleEmailLogin = () => {
+    // Email login logic goes here
+    console.log("Email Login Clicked");
+  };
+
   return (
-    <div className="h-full w-full border border-solid border-green-500 py-6 px-3 rounded-2xl">
-      <Form
-        name="basic"
-        labelCol={{ span: 8 }}
-        wrapperCol={{ span: 16 }}
-        style={{ maxWidth: 600  }}
-        initialValues={{ remember: true }}
-        autoComplete="off"
-      >
-        <Form.Item<FieldType>
-          label="Email"
-          name="email"
-          rules={[{ required: true, message: "Please input your Email!" }]}
+    <div className="h-full w-full py-6 px-3 bg-slate-300 ">
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "1rem" }}>
+        {/* Google Button */}
+        <Button
+          type="primary"
+          icon={<GoogleOutlined />}
+          onClick={handleGoogleLogin}
+          style={{
+            backgroundColor: "#4285F4",
+            borderColor: "#4285F4",
+            width: "250px",
+            height: "50px",
+          }}
         >
-          <Input />
-        </Form.Item>
+          Continue with Google
+        </Button>
 
-        <Form.Item<FieldType>
-          label="Password"
-          name="password"
-          rules={[{ required: true, message: "Please input your password!" }]}
+        {/* Email Button */}
+        <Button
+          type="default"
+          icon={<MailOutlined />}
+          onClick={handleEmailLogin}
+          style={{ width: "250px", height: "50px" }}
         >
-          <Input.Password />
-        </Form.Item>
-
-        <Form.Item<FieldType>
-          name="remember"
-          valuePropName="checked"
-          wrapperCol={{ offset: 8, span: 16 }}
-        >
-          <Checkbox>Remember me</Checkbox>
-        </Form.Item>
-
-        <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-          <Button type="primary" htmlType="submit">
-            Submit
-          </Button>
-        </Form.Item>
-      </Form>
+          Continue with Email
+        </Button>
+      </div>
     </div>
   );
 };
