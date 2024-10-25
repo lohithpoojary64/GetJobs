@@ -3,6 +3,7 @@ import Image from "next/image";
 import img1 from "../../../assests/header-img.jpg";
 import img2 from "../../../assests/img2.png";
 import Signup from "../../components/signUp/SignUp";
+import CompaniesList from "./CompaniesList";
 
 
 
@@ -32,6 +33,7 @@ const Header:React.FC = () => {
           className="h-[350px] w-[600px]"
         ></Image>
       </div>
+      <CompaniesList/>
     </div>
   );
 };
